@@ -12,7 +12,8 @@
     "db:generate": "drizzle-kit generate",
     "db:migrate": "drizzle-kit migrate",
     "db:push": "drizzle-kit push",
-    "db:studio": "drizzle-kit studio"
+    "db:studio": "drizzle-kit studio",
+    "db:import-off": "duckdb < scripts/import-openfoodfacts.sql"
   },
   "dependencies": {
     "cors": "^2.8.6",

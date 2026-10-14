@@ -1,0 +1,1331 @@
+{
+  "id": "1c2c280b-7579-4225-be67-8fcb34369b29",
+  "prevId": "074a11d2-9c35-4f4e-b9ce-60cad621eccc",
+  "version": "7",
+  "dialect": "postgresql",
+  "tables": {
+    "public.foods": {
+      "name": "foods",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "name": {
+          "name": "name",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "calories": {
+          "name": "calories",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        },
+        "code": {
+          "name": "code",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "url": {
+          "name": "url",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "creator": {
+          "name": "creator",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "created_t": {
+          "name": "created_t",
+          "type": "bigint",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "created_datetime": {
+          "name": "created_datetime",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "last_modified_t": {
+          "name": "last_modified_t",
+          "type": "bigint",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "last_modified_datetime": {
+          "name": "last_modified_datetime",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "last_modified_by": {
+          "name": "last_modified_by",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "last_updated_t": {
+          "name": "last_updated_t",
+          "type": "bigint",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "last_updated_datetime": {
+          "name": "last_updated_datetime",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "product_name": {
+          "name": "product_name",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "abbreviated_product_name": {
+          "name": "abbreviated_product_name",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "generic_name": {
+          "name": "generic_name",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "quantity": {
+          "name": "quantity",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "packaging": {
+          "name": "packaging",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "packaging_tags": {
+          "name": "packaging_tags",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "packaging_en": {
+          "name": "packaging_en",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "packaging_text": {
+          "name": "packaging_text",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "brands": {
+          "name": "brands",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "brands_tags": {
+          "name": "brands_tags",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "brands_en": {
+          "name": "brands_en",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "categories": {
+          "name": "categories",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "categories_tags": {
+          "name": "categories_tags",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "categories_en": {
+          "name": "categories_en",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "origins": {
+          "name": "origins",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "origins_tags": {
+          "name": "origins_tags",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "origins_en": {
+          "name": "origins_en",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "manufacturing_places": {
+          "name": "manufacturing_places",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "manufacturing_places_tags": {
+          "name": "manufacturing_places_tags",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "labels": {
+          "name": "labels",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "labels_tags": {
+          "name": "labels_tags",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "labels_en": {
+          "name": "labels_en",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "emb_codes": {
+          "name": "emb_codes",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "emb_codes_tags": {
+          "name": "emb_codes_tags",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "first_packaging_code_geo": {
+          "name": "first_packaging_code_geo",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "cities": {
+          "name": "cities",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "cities_tags": {
+          "name": "cities_tags",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "purchase_places": {
+          "name": "purchase_places",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "stores": {
+          "name": "stores",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "countries": {
+          "name": "countries",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "countries_tags": {
+          "name": "countries_tags",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "countries_en": {
+          "name": "countries_en",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "ingredients_text": {
+          "name": "ingredients_text",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "ingredients_tags": {
+          "name": "ingredients_tags",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "ingredients_analysis_tags": {
+          "name": "ingredients_analysis_tags",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "allergens": {
+          "name": "allergens",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "allergens_en": {
+          "name": "allergens_en",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "traces": {
+          "name": "traces",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "traces_tags": {
+          "name": "traces_tags",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "traces_en": {
+          "name": "traces_en",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "serving_size": {
+          "name": "serving_size",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "serving_quantity": {
+          "name": "serving_quantity",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "no_nutrition_data": {
+          "name": "no_nutrition_data",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "additives_n": {
+          "name": "additives_n",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "additives": {
+          "name": "additives",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "additives_tags": {
+          "name": "additives_tags",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "additives_en": {
+          "name": "additives_en",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "nutriscore_score": {
+          "name": "nutriscore_score",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "nutriscore_grade": {
+          "name": "nutriscore_grade",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "nova_group": {
+          "name": "nova_group",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "pnns_groups_1": {
+          "name": "pnns_groups_1",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "pnns_groups_2": {
+          "name": "pnns_groups_2",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "food_groups": {
+          "name": "food_groups",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "food_groups_tags": {
+          "name": "food_groups_tags",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "food_groups_en": {
+          "name": "food_groups_en",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "states": {
+          "name": "states",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "states_tags": {
+          "name": "states_tags",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "states_en": {
+          "name": "states_en",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "brand_owner": {
+          "name": "brand_owner",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "environmental_score_score": {
+          "name": "environmental_score_score",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "environmental_score_grade": {
+          "name": "environmental_score_grade",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "nutrient_levels_tags": {
+          "name": "nutrient_levels_tags",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "product_quantity": {
+          "name": "product_quantity",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "owner": {
+          "name": "owner",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "data_quality_errors_tags": {
+          "name": "data_quality_errors_tags",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "unique_scans_n": {
+          "name": "unique_scans_n",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "popularity_tags": {
+          "name": "popularity_tags",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "completeness": {
+          "name": "completeness",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "last_image_t": {
+          "name": "last_image_t",
+          "type": "bigint",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "last_image_datetime": {
+          "name": "last_image_datetime",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "main_category": {
+          "name": "main_category",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "main_category_en": {
+          "name": "main_category_en",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "image_url": {
+          "name": "image_url",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "image_small_url": {
+          "name": "image_small_url",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "image_ingredients_url": {
+          "name": "image_ingredients_url",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "image_ingredients_small_url": {
+          "name": "image_ingredients_small_url",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "image_nutrition_url": {
+          "name": "image_nutrition_url",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "image_nutrition_small_url": {
+          "name": "image_nutrition_small_url",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "energy_kj_100g": {
+          "name": "energy_kj_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "energy_kcal_100g": {
+          "name": "energy_kcal_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "energy_100g": {
+          "name": "energy_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "energy_from_fat_100g": {
+          "name": "energy_from_fat_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "fat_100g": {
+          "name": "fat_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "saturated_fat_100g": {
+          "name": "saturated_fat_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "butyric_acid_100g": {
+          "name": "butyric_acid_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "caproic_acid_100g": {
+          "name": "caproic_acid_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "caprylic_acid_100g": {
+          "name": "caprylic_acid_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "capric_acid_100g": {
+          "name": "capric_acid_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "lauric_acid_100g": {
+          "name": "lauric_acid_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "myristic_acid_100g": {
+          "name": "myristic_acid_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "palmitic_acid_100g": {
+          "name": "palmitic_acid_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "stearic_acid_100g": {
+          "name": "stearic_acid_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "arachidic_acid_100g": {
+          "name": "arachidic_acid_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "behenic_acid_100g": {
+          "name": "behenic_acid_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "lignoceric_acid_100g": {
+          "name": "lignoceric_acid_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "cerotic_acid_100g": {
+          "name": "cerotic_acid_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "montanic_acid_100g": {
+          "name": "montanic_acid_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "melissic_acid_100g": {
+          "name": "melissic_acid_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "unsaturated_fat_100g": {
+          "name": "unsaturated_fat_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "monounsaturated_fat_100g": {
+          "name": "monounsaturated_fat_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "omega_9_fat_100g": {
+          "name": "omega_9_fat_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "polyunsaturated_fat_100g": {
+          "name": "polyunsaturated_fat_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "omega_3_fat_100g": {
+          "name": "omega_3_fat_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "omega_6_fat_100g": {
+          "name": "omega_6_fat_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "alpha_linolenic_acid_100g": {
+          "name": "alpha_linolenic_acid_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "eicosapentaenoic_acid_100g": {
+          "name": "eicosapentaenoic_acid_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "docosahexaenoic_acid_100g": {
+          "name": "docosahexaenoic_acid_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "linoleic_acid_100g": {
+          "name": "linoleic_acid_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "arachidonic_acid_100g": {
+          "name": "arachidonic_acid_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "gamma_linolenic_acid_100g": {
+          "name": "gamma_linolenic_acid_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "dihomo_gamma_linolenic_acid_100g": {
+          "name": "dihomo_gamma_linolenic_acid_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "oleic_acid_100g": {
+          "name": "oleic_acid_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "elaidic_acid_100g": {
+          "name": "elaidic_acid_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "gondoic_acid_100g": {
+          "name": "gondoic_acid_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "mead_acid_100g": {
+          "name": "mead_acid_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "erucic_acid_100g": {
+          "name": "erucic_acid_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "nervonic_acid_100g": {
+          "name": "nervonic_acid_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "trans_fat_100g": {
+          "name": "trans_fat_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "cholesterol_100g": {
+          "name": "cholesterol_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "carbohydrates_100g": {
+          "name": "carbohydrates_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "sugars_100g": {
+          "name": "sugars_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "added_sugars_100g": {
+          "name": "added_sugars_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "sucrose_100g": {
+          "name": "sucrose_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "glucose_100g": {
+          "name": "glucose_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "fructose_100g": {
+          "name": "fructose_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "galactose_100g": {
+          "name": "galactose_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "lactose_100g": {
+          "name": "lactose_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "maltose_100g": {
+          "name": "maltose_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "maltodextrins_100g": {
+          "name": "maltodextrins_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "psicose_100g": {
+          "name": "psicose_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "starch_100g": {
+          "name": "starch_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "polyols_100g": {
+          "name": "polyols_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "erythritol_100g": {
+          "name": "erythritol_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "isomalt_100g": {
+          "name": "isomalt_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "maltitol_100g": {
+          "name": "maltitol_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "sorbitol_100g": {
+          "name": "sorbitol_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "fiber_100g": {
+          "name": "fiber_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "soluble_fiber_100g": {
+          "name": "soluble_fiber_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "polydextrose_100g": {
+          "name": "polydextrose_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "insoluble_fiber_100g": {
+          "name": "insoluble_fiber_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "proteins_100g": {
+          "name": "proteins_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "casein_100g": {
+          "name": "casein_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "serum_proteins_100g": {
+          "name": "serum_proteins_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "nucleotides_100g": {
+          "name": "nucleotides_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "salt_100g": {
+          "name": "salt_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "added_salt_100g": {
+          "name": "added_salt_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "sodium_100g": {
+          "name": "sodium_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "alcohol_100g": {
+          "name": "alcohol_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "vitamin_a_100g": {
+          "name": "vitamin_a_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "beta_carotene_100g": {
+          "name": "beta_carotene_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "vitamin_d_100g": {
+          "name": "vitamin_d_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "vitamin_e_100g": {
+          "name": "vitamin_e_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "vitamin_k_100g": {
+          "name": "vitamin_k_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "vitamin_c_100g": {
+          "name": "vitamin_c_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "vitamin_b1_100g": {
+          "name": "vitamin_b1_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "vitamin_b2_100g": {
+          "name": "vitamin_b2_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "vitamin_pp_100g": {
+          "name": "vitamin_pp_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "vitamin_b6_100g": {
+          "name": "vitamin_b6_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "vitamin_b9_100g": {
+          "name": "vitamin_b9_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "folates_100g": {
+          "name": "folates_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "vitamin_b12_100g": {
+          "name": "vitamin_b12_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "biotin_100g": {
+          "name": "biotin_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "pantothenic_acid_100g": {
+          "name": "pantothenic_acid_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "silica_100g": {
+          "name": "silica_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "bicarbonate_100g": {
+          "name": "bicarbonate_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "potassium_100g": {
+          "name": "potassium_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "chloride_100g": {
+          "name": "chloride_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "calcium_100g": {
+          "name": "calcium_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "phosphorus_100g": {
+          "name": "phosphorus_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "iron_100g": {
+          "name": "iron_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "magnesium_100g": {
+          "name": "magnesium_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "zinc_100g": {
+          "name": "zinc_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "copper_100g": {
+          "name": "copper_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "manganese_100g": {
+          "name": "manganese_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "fluoride_100g": {
+          "name": "fluoride_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "selenium_100g": {
+          "name": "selenium_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "chromium_100g": {
+          "name": "chromium_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "molybdenum_100g": {
+          "name": "molybdenum_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "iodine_100g": {
+          "name": "iodine_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "caffeine_100g": {
+          "name": "caffeine_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "taurine_100g": {
+          "name": "taurine_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "methylsulfonylmethane_100g": {
+          "name": "methylsulfonylmethane_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "hydroxymethylbutyrate_100g": {
+          "name": "hydroxymethylbutyrate_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "ph_100g": {
+          "name": "ph_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "fruits_vegetables_legumes_100g": {
+          "name": "fruits_vegetables_legumes_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "collagen_meat_protein_ratio_100g": {
+          "name": "collagen_meat_protein_ratio_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "cocoa_100g": {
+          "name": "cocoa_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "chlorophyl_100g": {
+          "name": "chlorophyl_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "carbon_footprint_100g": {
+          "name": "carbon_footprint_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "glycemic_index_100g": {
+          "name": "glycemic_index_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "water_hardness_100g": {
+          "name": "water_hardness_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "choline_100g": {
+          "name": "choline_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "phylloquinone_100g": {
+          "name": "phylloquinone_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "beta_glucan_100g": {
+          "name": "beta_glucan_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "inositol_100g": {
+          "name": "inositol_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "carnitine_100g": {
+          "name": "carnitine_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "sulphate_100g": {
+          "name": "sulphate_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "nitrate_100g": {
+          "name": "nitrate_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "acidity_100g": {
+          "name": "acidity_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "carbohydrates_total_100g": {
+          "name": "carbohydrates_total_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "water_100g": {
+          "name": "water_100g",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {
+        "foods_code_unique": {
+          "name": "foods_code_unique",
+          "nullsNotDistinct": false,
+          "columns": [
+            "code"
+          ]
+        }
+      },
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    }
+  },
+  "enums": {},
+  "schemas": {},
+  "sequences": {},
+  "roles": {},
+  "policies": {},
+  "views": {},
+  "_meta": {
+    "columns": {},
+    "schemas": {},
+    "tables": {}
+  }
+}

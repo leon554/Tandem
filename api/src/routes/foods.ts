@@ -7,7 +7,11 @@ import { foods } from '../db/schema.js';
 export const foodsRouter = Router();
 
 foodsRouter.get('/', async (_req, res) => {
-  const rows = await db.select().from(foods).orderBy(desc(foods.createdAt));
+  const rows = await db
+    .select({ id: foods.id, name: foods.name, calories: foods.calories, createdAt: foods.createdAt })
+    .from(foods)
+    .orderBy(desc(foods.id))
+    .limit(50);
   res.json(rows);
 });
 

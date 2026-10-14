@@ -24,7 +24,7 @@ async function request<T>(path: string, init?: RequestInit): Promise<T> {
 }
 
 export const api = {
-  health: () => request<Health>('/health'),
+  health: () => request<Health>('/api/health'),
   listFoods: () => request<Food[]>('/api/foods'),
   createFood: (food: { name: string; calories: number }) =>
     request<Food>('/api/foods', { method: 'POST', body: JSON.stringify(food) }),
